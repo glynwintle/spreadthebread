@@ -46,3 +46,19 @@
 2013-10-12 15:16:58.144 SarnieSelecta[51318:a0b] Multi-tasking -> Device: YES, App: YES
 2013-10-12 15:16:58.540 SarnieSelecta[51318:a0b] Resetting plugins due to page load.
 2013-10-12 15:17:02.025 SarnieSelecta[51318:a0b] Finished load of: file:///Users/lewiswestbury/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/39F082BC-6574-4ED4-8F6A-E58621A357C5/SarnieSelecta.app/www/index.html
+2013-10-12 15:29:02.459 SarnieSelecta[56271:a0b] Multi-tasking -> Device: YES, App: YES
+2013-10-12 15:29:03.089 SarnieSelecta[56271:a0b] Resetting plugins due to page load.
+2013-10-12 15:29:05.802 SarnieSelecta[56271:a0b] Finished load of: file:///Users/lewiswestbury/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/39F082BC-6574-4ED4-8F6A-E58621A357C5/SarnieSelecta.app/www/index.html
+2013-10-12 15:33:53.289 SarnieSelecta[57745:a0b] Multi-tasking -> Device: YES, App: YES
+2013-10-12 15:33:53.706 SarnieSelecta[57745:a0b] Resetting plugins due to page load.
+2013-10-12 15:34:07.738 SarnieSelecta[57745:4303] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-10-12 15:34:07.792 SarnieSelecta[57745:a0b] Finished load of: file:///Users/lewiswestbury/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/39F082BC-6574-4ED4-8F6A-E58621A357C5/SarnieSelecta.app/www/index.html
+2013-10-12 15:36:42.368 SarnieSelecta[59198:a0b] Multi-tasking -> Device: YES, App: YES
+2013-10-12 15:36:42.639 SarnieSelecta[59198:a0b] Resetting plugins due to page load.
+2013-10-12 15:36:44.806 SarnieSelecta[59198:a0b] Finished load of: file:///Users/lewiswestbury/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/39F082BC-6574-4ED4-8F6A-E58621A357C5/SarnieSelecta.app/www/index.html
+2013-10-12 15:37:51.027 SarnieSelecta[60643:a0b] Multi-tasking -> Device: YES, App: YES
+2013-10-12 15:37:51.487 SarnieSelecta[60643:a0b] Resetting plugins due to page load.
+2013-10-12 15:37:51.823 SarnieSelecta[60643:a0b] Finished load of: file:///Users/lewiswestbury/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/39F082BC-6574-4ED4-8F6A-E58621A357C5/SarnieSelecta.app/www/index.html
+2013-10-12 15:39:24.069 SarnieSelecta[62126:a0b] Multi-tasking -> Device: YES, App: YES
+2013-10-12 15:39:24.444 SarnieSelecta[62126:a0b] Resetting plugins due to page load.
+2013-10-12 15:39:24.930 SarnieSelecta[62126:a0b] Finished load of: file:///Users/lewiswestbury/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/39F082BC-6574-4ED4-8F6A-E58621A357C5/SarnieSelecta.app/www/index.html

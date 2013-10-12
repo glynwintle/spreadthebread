@@ -37,7 +37,7 @@ function fake_retrieve_sandwiches() {
 }
 
 /**
- * sandwiches: [ { name, price } ... ]
+ * sandwiches: [ { name, price, image } ... ]
  **/
 function populate_sandwich_list(sandwiches) {
     var ul = '';
@@ -47,8 +47,7 @@ function populate_sandwich_list(sandwiches) {
         var li =
             '<li>' +
                 '<a>' +
-                    //'<img src="images/sandwich-generic.jpg" />' +
-                    '<img src="icons/32x32/square.png" />' +
+                    '<img src="' + sandwich.image + '" />' +
                     '<h3>' + sandwich.name + '</h3>' +
                     '<p>' + sandwich.price + '</p>' +
                 '</a>' +
@@ -57,21 +56,8 @@ function populate_sandwich_list(sandwiches) {
         ul += li;
     }
 
-    /*    
-    if (posts.length == 0) {
-        $('#posts-list-ul').hide();
-        $('#no-posts-div').show();
-    } else {
-        $('#no-posts-div').hide();
-        $('#posts-list-ul').show();
-    */
-
     $('#sandwich-list-ul').html(ul);
-    $('#sandwich-list-ul').attr('data-split-icon', 'gear');
-    
-    alert('listview-incoming!');
+    $('#sandwich-list-ul').attr('data-split-icon', 'arrow-r');
     
     $('#sandwich-list-ul').listview('refresh');
-    
-    //}
 }
