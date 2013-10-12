@@ -8,9 +8,11 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.3.2.min.js"></script>
     <script src="js/sarnie-selecta.js"></script>
+    <script src="js/sarnie-selecta-fake-data.js"></script>
 
     <script>
         $(document).ready(function(){
+            // watevs
         });
     </script>
 
@@ -19,15 +21,31 @@
 </head>
 <body>
     
-    <div data-role="page">
+    <div data-role="page" id="sandwich-list">
         <div data-role="header" data-position="fixed">
-            <h4>Sarnie Selecta</h4>
+            <h4>Sandwiches</h4>
         </div>
         
         <div data-role="content">
-            sandwiches!<br/>
-            sandwiches!<br/>
-            sandwiches!
+
+            <ul id="sandwich-list-ul" data-role="listview" data-split-icon="gear" data-split-theme="d">
+                <li>
+                    <a href="index.html">
+                        <img src="images/sandwich-generic.jpg" />
+                        <h3>A sandwich</h3>
+                        <p>It is fucken delicious</p>
+                    </a>
+                    <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+                </li>
+                
+                <!--
+                <li><a href="#">Yummy sandwich</a></li>
+                <li><a href="#">Ok sandwich</a></li>
+                <li><a href="#">Awful sandwich</a></li>
+                -->
+                
+            </ul>
+
         </div>
 
         <div data-role="footer" data-position="fixed">
