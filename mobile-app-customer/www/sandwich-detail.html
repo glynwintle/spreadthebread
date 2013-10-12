@@ -1,0 +1,21 @@
+<div data-role="page" id="sandwich-detail"  data-add-back-btn="true">
+    <div data-role="header" data-position="fixed">
+        <h4>Place Order</h4>
+    </div>
+    
+    <div data-role="content">
+        <div>
+            <h2 style="text-align: left;" id="sandwich-name"></h2>
+            <div style="text-align: right;" id="sandwich-price"></div>
+        </div>
+        
+        <p id="sandwich-description"></p>
+
+        <div style="text-align: right;">
+            <a href="#" data-role="button" data-inline="true" data-mini="true" data-icon="check" data-theme="b"
+               onclick="remote_purchase_sandwich(CURRENT_SANDWICH_INDEX);">Order</a>
+        </div>
+        
+    </div>
+
+</div><!-- /page -->
