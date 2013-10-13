@@ -11,7 +11,7 @@ function visit_sandwich_detail(sandwich_index) {
 $(document).delegate('#sandwich-list', 'pageshow', load_sandwich_list);
 $(document).delegate('#sandwich-detail', 'pageshow', display_current_sandwich_detail);
 
-function load_sandwich_list() { /*remote_retrieve_sandwiches();*/ fake_retrieve_sandwiches(); }
+function load_sandwich_list() { /*remote_retrieve_sandwiches();*/ fake_retrieve_sandwiches();}
 
 /*** SHARED_DATA ***/
 
@@ -20,17 +20,17 @@ var CURRENT_SANDWICH_INDEX;
 
 /*** REMOTE API CALL METHODS ***/
 
-var REMOTE_SERVER = "http://dans.server.com/";
-var PATH_RETRIEVE_ALL_SANDWICHES = "stb/getAllSandwiches";
+var REMOTE_SERVER = "http://sandwich-api.herokuapp.com/";
+var PATH_RETRIEVE_ALL_SANDWICHES = "products?lon=51.5045466&lat=-0.01968839";
 
 function remote_retrieve_sandwiches() {
     $.ajax({ type: "GET",
         contenttype: "application/json; charset=utf-8",
-        data: "{null}",
+//        data: "{null}",
         url: REMOTE_SERVER + PATH_RETRIEVE_ALL_SANDWICHES,
         dataType:"json",
         success: function(res) {
-            var obj = JSON.parse(res);
+            var obj = res;
             SANDWICH_DATA = obj;
             populate_sandwich_list(SANDWICH_DATA);
         },
@@ -40,8 +40,11 @@ function remote_retrieve_sandwiches() {
     });                    
 }
 
+function remote_purchase_sandwich(id) {
+}
+
 function fake_retrieve_sandwiches() {
-    SANDWICH_DATA = FAKE_SANDWICHES;
+    SANDWICH_DATA = FAKE_SANDWICHES;;
     populate_sandwich_list(SANDWICH_DATA);
 }
 
@@ -52,15 +55,15 @@ function fake_retrieve_sandwiches() {
  **/
 function populate_sandwich_list(sandwiches) {
     var ul = '';
-    for (var i = 0; i < sandwiches.length; i++) {
-        var sandwich = sandwiches[i];
+    for (var i = 0; i < sandwiches.items.length; i++) {
+        var sandwich = sandwiches.items[i];
         
         var li =
             '<li>' +
                 '<a onclick="visit_sandwich_detail(' + i + ')">' +
                     '<img src="' + sandwich.image + '" />' +
                     '<h3>' + sandwich.name + '</h3>' +
-                    '<p>' + sandwich.price + '</p>' +
+                    '<p> &pound;' + sandwich.price + '</p>' +
                 '</a>' +
                 '<a onclick="visit_sandwich_detail(' + i + ')"></a>' +
             '</li>';
@@ -75,7 +78,7 @@ function populate_sandwich_list(sandwiches) {
 
 function display_current_sandwich_detail() {
     
-    var sandwich = SANDWICH_DATA[CURRENT_SANDWICH_INDEX];
+    var sandwich = SANDWICH_DATA.items[CURRENT_SANDWICH_INDEX];
     //alert('sandwich index: ' + CURRENT_SANDWICH_INDEX);    
     
     $('#sandwich-name').html(sandwich.name);
